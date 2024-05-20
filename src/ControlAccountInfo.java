@@ -2,12 +2,24 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ControlAccountInfo {
-    private String accountNumber = "0912345678";
-    private String accountName = " Vu Manh Khoi";
-    private double balance = 10000000;
+    private String accountNumber ;
+    private String accountName ;
+    private double balance ;
     Scanner sc = new Scanner(System.in);
     ArrayList accountList = new ArrayList();
-
+    public void insertAccount(){
+        System.out.println("Enter account number: ");
+        accountNumber = sc.nextLine();
+        System.out.println("Enter account name: ");
+        accountName = sc.nextLine();
+        System.out.println("Enter balance: ");
+        balance = sc.nextDouble();
+        AccountBankList abl = new AccountBankList(accountNumber,accountName,balance);
+        accountList.add(abl);
+        abl.setAccountName(accountName);
+        abl.setBalance(balance);
+        abl.setAccountNumber(accountNumber);
+    }
     public void displayAccountInfo() {
         AccountBankList accountBank = new AccountBankList(accountNumber, accountName, balance);
         System.out.println("Account Number: " + accountBank.getAccountNumber());
