@@ -4,9 +4,9 @@ public class AccountBank {
     private double balance;
 
     public void displayAccountInfo(String accountNumber, String accountHolderName, double balance) {
-        System.out.println("Account Number: " + this.accountNumber);
-        System.out.println("Account Holder Name: " + this.accountHolderName);
-        System.out.println("Balance: " + this.balance);
+        System.out.println("Account Number: " + accountNumber);
+        System.out.println("Account Holder Name: " + accountHolderName);
+        System.out.println("Balance: " + balance);
     }
 
     public void deposit(double amount) {
